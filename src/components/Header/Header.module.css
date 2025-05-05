@@ -1,0 +1,46 @@
+.appBar {
+    background-color: var(--card-bg) !important;
+    color: var(--text) !important;
+    transition: background-color 0.3s, color 0.3s !important;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .highlight {
+    color: var(--primary);
+    text-shadow: var(--primary-shadow);
+  }
+  
+  .menuButton {
+    margin-right: 16px;
+  }
+  
+  .avatar {
+    width: 40px !important;
+    height: 40px !important;
+    transition: transform 0.3s !important;
+  }
+  
+  .avatar:hover {
+    transform: scale(1.1);
+  }
+  
+  .themeToggle {
+    margin-right: 16px;
+  }
+  
+  /* Media queries */
+  @media (max-width: 600px) {
+    .themeToggle {
+      margin-right: 8px;
+    }
+    
+    .logo {
+      font-size: 1.2rem;
+    }
+  }
