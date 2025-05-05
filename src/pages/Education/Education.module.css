@@ -1,0 +1,113 @@
+.educationPage {
+    padding: 16px 0;
+  }
+  
+  .sectionHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .sectionIcon {
+    color: var(--primary);
+    font-size: 2rem !important;
+    margin-right: 12px;
+  }
+  
+  .sectionTitle {
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .tableContainer {
+    margin-bottom: 32px;
+    background-color: var(--card-bg) !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .tableHeader {
+    background-color: rgba(0, 170, 255, 0.1) !important;
+  }
+  
+  .tableHeader th {
+    font-weight: 600 !important;
+    color: var(--primary) !important;
+  }
+  
+  .evenRow {
+    background-color: rgba(0, 0, 0, 0.02) !important;
+  }
+  
+  .oddRow {
+    background-color: rgba(255, 255, 255, 0.01) !important;
+  }
+  
+  .degreeTitle {
+    font-weight: 500 !important;
+    color: var(--text) !important;
+  }
+  
+  .degreeDetails {
+    color: var(--text) !important;
+    opacity: 0.7;
+    font-size: 0.85rem !important;
+  }
+  
+  .institutionName {
+    font-weight: 500 !important;
+    color: var(--text) !important;
+  }
+  
+  .institutionLocation {
+    color: var(--text) !important;
+    opacity: 0.7;
+    font-size: 0.85rem !important;
+  }
+  
+  .certifications {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subTitle {
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: var(--text);
+    position: relative;
+    padding-bottom: 8px;
+  }
+  
+  .subTitle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary);
+  }
+  
+  .certList {
+    list-style-position: inside;
+    padding-left: 16px;
+    color: var(--text);
+  }
+  
+  .certList li {
+    margin-bottom: 8px;
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 768px) {
+    .tableContainer {
+      overflow-x: auto;
+    }
+    
+    .sectionHeader {
+      margin-bottom: 16px;
+    }
+  }
