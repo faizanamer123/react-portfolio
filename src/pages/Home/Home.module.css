@@ -1,0 +1,124 @@
+.homePage {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background);
+  }
+  
+  .textContent {
+    animation: fadeInLeft 1s ease-out;
+  }
+  
+  .greeting {
+    color: var(--text);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+  
+  .role {
+    color: var(--primary);
+    margin-bottom: 24px;
+    text-shadow: var(--primary-shadow);
+    font-weight: 600;
+    display: inline-block;
+  }
+  
+  .typingEffect {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .typingEffect::after {
+    content: '|';
+    position: absolute;
+    right: -8px;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .bio {
+    margin-bottom: 32px;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    color: var(--text);
+    opacity: 0.9;
+  }
+  
+  .btnContainer {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .primaryBtn {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 10px 24px !important;
+    box-shadow: var(--primary-shadow) !important;
+    transition: transform 0.3s, box-shadow 0.3s !important;
+  }
+  
+  .primaryBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 170, 255, 0.4) !important;
+  }
+  
+  .secondaryBtn {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    padding: 10px 24px !important;
+    transition: transform 0.3s, background-color 0.3s !important;
+  }
+  
+  .secondaryBtn:hover {
+    background-color: var(--primary) !important;
+    color: white !important;
+    border-color: white !important;
+    transform: translateY(-3px);
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imageWrapper {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: var(--primary-shadow);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .imageWrapper:hover {
+    transform: scale(1.05);
+  }
+  
+  .profileImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+  }
+  
