@@ -1,0 +1,32 @@
+.skillBar {
+    margin-bottom: 20px;
+  }
+  
+  .skillHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .skillName {
+    font-weight: 500;
+    color: var(--text);
+  }
+  
+  .skillPercentage {
+    color: var(--primary);
+    font-weight: 600;
+  }
+  
+  .progressBar {
+    height: 10px !important;
+    border-radius: 5px !important;
+    background-color: rgba(128, 128, 128, 0.2) !important;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .progressBarFill {
+    background-color: var(--primary) !important;
+    box-shadow: var(--primary-shadow);
+    transition: width 1.5s ease-in-out !important;
+  }
