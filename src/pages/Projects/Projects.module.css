@@ -1,0 +1,21 @@
+.projectsPage {
+    padding: 16px 0;
+  }
+  
+  .pageDescription {
+    margin-bottom: 32px;
+    max-width: 800px;
+    color: var(--text);
+    opacity: 0.9;
+    line-height: 1.7;
+  }
+  
+  .projectsGrid {
+    margin-bottom: 32px;
+  }
+  
+  @media (max-width: 768px) {
+    .pageDescription {
+      margin-bottom: 24px;
+    }
+  }
