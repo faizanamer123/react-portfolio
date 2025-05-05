@@ -1,0 +1,66 @@
+.projectCard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg) !important;
+    color: var(--text) !important;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s !important;
+    overflow: hidden;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .cardMedia {
+    transition: transform 0.5s;
+  }
+  
+  .projectCard:hover .cardMedia {
+    transform: scale(1.05);
+  }
+  
+  .cardContent {
+    flex-grow: 1;
+    padding: 16px;
+  }
+  
+  .projectTitle {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  
+  .projectDescription {
+    margin-bottom: 16px;
+    color: var(--text);
+    opacity: 0.8;
+  }
+  
+  .techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .techChip {
+    background-color: rgba(0, 170, 255, 0.15) !important;
+    color: var(--primary) !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .cardActions {
+    padding: 8px 16px 16px;
+  }
+  
+  .projectButton {
+    color: var(--primary) !important;
+    transition: background-color 0.3s, transform 0.3s !important;
+  }
+  
+  .projectButton:hover {
+    background-color: rgba(0, 170, 255, 0.1) !important;
+    transform: translateY(-2px);
+  }
