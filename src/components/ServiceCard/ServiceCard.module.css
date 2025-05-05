@@ -1,0 +1,44 @@
+.serviceCard {
+    padding: 24px;
+    height: 100%;
+    text-align: center;
+    background-color: var(--card-bg) !important;
+    color: var(--text) !important;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s !important;
+    border-radius: 8px !important;
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  .iconContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: var(--primary);
+    font-size: 3rem;
+  }
+  
+  .iconContainer svg {
+    font-size: 3rem;
+    color: var(--primary);
+    filter: drop-shadow(var(--primary-shadow));
+    transition: transform 0.3s;
+  }
+  
+  .serviceCard:hover .iconContainer svg {
+    transform: scale(1.1);
+  }
+  
+  .serviceTitle {
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .serviceDescription {
+    color: var(--text);
+    opacity: 0.8;
+  }
