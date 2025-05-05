@@ -1,0 +1,94 @@
+.drawer {
+    width: 240px;
+    flex-shrink: 0;
+  }
+  
+  .drawerPaper {
+    width: 240px;
+    background-color: var(--card-bg) !important;
+    color: var(--text) !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    transition: background-color 0.3s, color 0.3s !important;
+  }
+  
+  .drawerContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profileSection {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profileAvatar {
+    width: 100px !important;
+    height: 100px !important;
+    margin-bottom: 10px;
+    animation: pulse 5s infinite;
+    box-shadow: 0 0 15px var(--primary);
+  }
+  
+  .profileName {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text);
+  }
+  
+  .profileTitle {
+    color: var(--primary);
+    font-weight: 500;
+  }
+  
+  .navItem {
+    padding: 10px 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navIcon {
+    color: var(--text) !important;
+    min-width: 40px !important;
+  }
+  
+  .activeNavItem {
+    background-color: rgba(0, 170, 255, 0.1) !important;
+    border-left: 3px solid var(--primary);
+  }
+  
+  .activeNavItem .navIcon {
+    color: var(--primary) !important;
+  }
+  
+  .activeNavItem .MuiListItemText-primary {
+    color: var(--primary) !important;
+    font-weight: 500;
+  }
+  
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    margin-top: auto;
+  }
+  
+  .socialIcon {
+    color: var(--text);
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .socialIcon:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 960px) {
+    .drawer {
+      width: 240px;
+    }
+  }
