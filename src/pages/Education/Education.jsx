@@ -21,31 +21,28 @@ const Education = () => {
     updatePageTitle('Education');
   }, [updatePageTitle]);
 
-  // Education data
+  // Education data (updated, no GPA)
   const education = [
     {
-      degree: 'Master of Science in Computer Science',
-      institution: 'Stanford University',
-      location: 'Stanford, CA',
-      duration: '2019 - 2021',
-      gpa: '3.8/4.0',
-      details: 'Specialized in Human-Computer Interaction and Web Technologies'
+      degree: 'Bachelor of Science in Information and Technology',
+      institution: 'University of Information and Technology',
+      location: 'Lahore, Pakistan',
+      duration: '2023 - 2027',
+      details: 'Specialized in modern web technologies and software engineering.'
     },
     {
-      degree: 'Bachelor of Engineering in Software Engineering',
-      institution: 'University of California',
-      location: 'Berkeley, CA',
-      duration: '2015 - 2019',
-      gpa: '3.7/4.0',
-      details: 'Graduated with Honors. Final project: Developing a social media platform for local communities'
+      degree: 'Intermediate (Pre-Engineering)',
+      institution: 'Punjab College',
+      location: 'Lahore, Pakistan',
+      duration: '2021 - 2023',
+      details: 'Focused on mathematics, physics, and computer science.'
     },
     {
-      degree: 'Associate Degree in Web Development',
-      institution: 'San Francisco City College',
-      location: 'San Francisco, CA',
-      duration: '2013 - 2015',
-      gpa: '3.9/4.0',
-      details: 'Focused on frontend and backend technologies for web applications'
+      degree: 'Matriculation',
+      institution: 'Divisional Public School',
+      location: 'Lahore, Pakistan',
+      duration: '2011 - 2021',
+      details: 'Completed primary and secondary education with a focus on science.'
     }
   ];
 
@@ -65,7 +62,6 @@ const Education = () => {
               <TableCell>Degree</TableCell>
               <TableCell>Institution</TableCell>
               <TableCell>Duration</TableCell>
-              <TableCell>GPA</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -91,7 +87,6 @@ const Education = () => {
                   </Typography>
                 </TableCell>
                 <TableCell>{edu.duration}</TableCell>
-                <TableCell>{edu.gpa}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -103,10 +98,8 @@ const Education = () => {
           Certifications & Additional Training
         </Typography>
         <ul className={styles.certList}>
-          <li>AWS Certified Solutions Architect - 2022</li>
-          <li>Google Professional Web Developer - 2021</li>
-          <li>Certified Scrum Master - 2020</li>
-          <li>Advanced React and Redux - Udemy - 2019</li>
+          <li>Code Rush - 2024</li>
+          <li>Softec App Dev Runner Up - 2025</li>
         </ul>
       </Box>
     </Box>

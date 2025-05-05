@@ -1,0 +1,56 @@
+.contactPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 32px 0;
+}
+
+.contactCard {
+  max-width: 500px;
+  width: 100%;
+  padding: 40px 32px;
+  border-radius: 16px !important;
+  background-color: var(--card-bg) !important;
+  color: var(--text) !important;
+  box-shadow: 0 8px 32px rgba(0, 170, 255, 0.08) !important;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.contactTitle {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.contactSubtitle {
+  color: var(--text);
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.form {
+  margin-top: 8px;
+}
+
+.submitBtn {
+  margin-top: 16px !important;
+  background-color: var(--primary) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  box-shadow: var(--primary-shadow) !important;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: var(--secondary) !important;
+}
+
+@media (max-width: 600px) {
+  .contactCard {
+    padding: 16px 2px;
+  }
+  .contactTitle {
+    font-size: 1.3rem;
+  }
+} 

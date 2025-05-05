@@ -50,7 +50,7 @@ const SideNav = ({ open, handleDrawerToggle }) => {
           Faizan Amir
         </Typography>
         <Typography variant="body2" className={styles.profileTitle}>
-          Web Developer
+          Full Stack Developer
         </Typography>
       </Box>
       <Divider />

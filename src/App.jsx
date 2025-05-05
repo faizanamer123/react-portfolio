@@ -20,6 +20,7 @@ const Education = lazy(() => import('./pages/Education/Education'));
 const Skills = lazy(() => import('./pages/Skills/Skills'));
 const Services = lazy(() => import('./pages/Services/Services'));
 const Projects = lazy(() => import('./pages/Projects/Projects'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 
 function App() {
@@ -51,6 +52,8 @@ function App() {
                     <Route path="/skills" element={<Skills />} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/projects" element={<Projects />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="*" element={<NotFound />} />
                   </Routes>
                 </Suspense>
               </MainSection>

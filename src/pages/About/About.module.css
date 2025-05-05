@@ -1,0 +1,100 @@
+.aboutPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 32px 0;
+}
+
+.aboutCard {
+  max-width: 900px;
+  width: 100%;
+  padding: 40px 32px;
+  border-radius: 16px !important;
+  background-color: var(--card-bg) !important;
+  color: var(--text) !important;
+  box-shadow: 0 8px 32px rgba(0, 170, 255, 0.08) !important;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.avatarSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  width: 160px !important;
+  height: 160px !important;
+  border-radius: 50%;
+  box-shadow: 0 0 24px var(--primary-shadow);
+  margin-bottom: 16px;
+}
+
+.bioSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.role {
+  color: var(--secondary);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.bio {
+  margin-bottom: 24px;
+  color: var(--text);
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skillTag {
+  background: rgba(0, 170, 255, 0.12);
+  color: var(--primary);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.skillTag:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .aboutCard {
+    padding: 24px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutCard {
+    padding: 16px 2px;
+  }
+  .avatar {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .name {
+    font-size: 1.3rem;
+  }
+  .role {
+    font-size: 1rem;
+  }
+} 

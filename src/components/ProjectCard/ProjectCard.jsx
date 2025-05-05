@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
   Card, 
-  CardMedia, 
   CardContent, 
   Typography, 
   CardActions, 
@@ -16,20 +15,12 @@ import styles from './ProjectCard.module.css';
 const ProjectCard = ({ 
   title, 
   description, 
-  image, 
   technologies, 
   githubLink, 
   demoLink 
 }) => {
   return (
     <Card className={styles.projectCard}>
-      <CardMedia
-        component="img"
-        height="180"
-        image={image}
-        alt={title}
-        className={styles.cardMedia}
-      />
       <CardContent className={styles.cardContent}>
         <Typography variant="h6" component="h3" className={styles.projectTitle}>
           {title}
