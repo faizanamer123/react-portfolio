@@ -3,6 +3,8 @@ import { Box, Typography, TextField, Button, Paper, Alert } from '@mui/material'
 import { usePageTitle } from '../../context/PageTitleContext';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useApi } from '../../hooks/useApi';
+import { contactApi } from '../../utils/api';
 import styles from './Contact.module.css';
 
 const validationSchema = Yup.object({
@@ -14,6 +16,7 @@ const validationSchema = Yup.object({
 const Contact = () => {
   const { updatePageTitle } = usePageTitle();
   const [submitted, setSubmitted] = useState(false);
+  const { execute: submitContact } = useApi(contactApi.create);
 
   useEffect(() => {
     updatePageTitle('Contact');
@@ -22,10 +25,17 @@ const Contact = () => {
   const formik = useFormik({
     initialValues: { name: '', email: '', message: '' },
     validationSchema,
-    onSubmit: (values, { resetForm }) => {
-      setSubmitted(true);
-      resetForm();
-      setTimeout(() => setSubmitted(false), 4000);
+    onSubmit: async (values, { resetForm, setSubmitting }) => {
+      try {
+        await submitContact(values);
+        setSubmitted(true);
+        resetForm();
+        setTimeout(() => setSubmitted(false), 4000);
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      } finally {
+        setSubmitting(false);
+      }
     },
   });
 
@@ -84,7 +94,7 @@ const Contact = () => {
             sx={{ mt: 2 }}
             fullWidth
           >
-            Send Message
+            {formik.isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>
           {submitted && <Alert severity="success" sx={{ mt: 2 }}>Thank you! Your message has been sent.</Alert>}
         </form>

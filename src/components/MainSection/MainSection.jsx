@@ -15,7 +15,7 @@ const MainSection = ({ children }) => {
       sx={{ 
         flexGrow: 1, 
         p: 3,
-        ml: { xs: 0, md: '240px' }, // Adjust margin based on drawer width
+        ml: { xs: 0, md: '150px' },
         width: { xs: '100%', md: 'calc(100% - 240px)' },
       }}
     >

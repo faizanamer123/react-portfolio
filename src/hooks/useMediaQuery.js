@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-
-// Usage: const isMobile = useMediaQuery('(max-width: 600px)');
 function useMediaQuery(query) {
   const getMatches = (q) => {
     if (typeof window !== 'undefined') {

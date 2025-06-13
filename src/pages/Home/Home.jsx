@@ -46,8 +46,8 @@ const Home = () => {
               Download CV
             </Button>
             <Button 
-              component={Link}
-              to="/contact"
+              component={Link} 
+              to="/contact" 
               variant="outlined" 
               className={styles.secondaryBtn}
               startIcon={<EmailIcon />}

@@ -8,21 +8,31 @@ import {
   TableCell, 
   TableContainer, 
   TableHead, 
-  TableRow 
+  TableRow,
+  CircularProgress
 } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import { usePageTitle } from '../../context/PageTitleContext';
+import { useApi } from '../../hooks/useApi';
+import { educationApi } from '../../utils/api';
 import styles from './Education.module.css';
 
 const Education = () => {
   const { updatePageTitle } = usePageTitle();
+  const { data: educationData, loading, error } = useApi(educationApi.getAll);
   
   useEffect(() => {
     updatePageTitle('Education');
   }, [updatePageTitle]);
 
-  // Education data (updated, no GPA)
-  const education = [
+  // Transform API data to match original structure
+  const education = educationData?.map(edu => ({
+    degree: edu.degree,
+    institution: edu.institution,
+    location: edu.location,
+    duration: `${new Date(edu.startDate).getFullYear()} - ${edu.endDate ? new Date(edu.endDate).getFullYear() : 'Present'}`,
+    details: edu.description
+  })) || [
     {
       degree: 'Bachelor of Science in Information and Technology',
       institution: 'University of Information and Technology',
@@ -45,6 +55,22 @@ const Education = () => {
       details: 'Completed primary and secondary education with a focus on science.'
     }
   ];
+
+  if (loading) {
+    return (
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+        <CircularProgress color="primary" />
+      </Box>
+    );
+  }
+
+  if (error) {
+    return (
+      <Box sx={{ p: 3 }}>
+        <Typography color="error">Error loading education data: {error}</Typography>
+      </Box>
+    );
+  }
 
   return (
     <Box className={styles.educationPage}>

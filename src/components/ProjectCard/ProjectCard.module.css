@@ -1,67 +1,111 @@
 .projectCard {
     height: 100%;
-    min-height: 260px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: var(--card-bg) !important;
-    color: var(--text) !important;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s !important;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-.projectCard:hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .projectCard:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
-}
-
-.cardContent {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .imageContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .projectCard:hover .projectImage {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .projectCard:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlayContent {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .iconButton {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .iconButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+  
+  .cardContent {
     flex-grow: 1;
-    padding: 24px 16px 8px 16px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-}
-
-.projectTitle {
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .projectTitle {
     font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--text);
-}
-
-.projectDescription {
-    margin-bottom: 16px;
-    color: var(--text);
-    opacity: 0.8;
-}
-
-.techStack {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projectDescription {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .technologiesContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
-}
-
-.techChip {
-    background-color: rgba(0, 170, 255, 0.15) !important;
-    color: var(--primary) !important;
-    font-size: 0.7rem !important;
-}
-
-.cardActions {
-    padding: 8px 16px 16px;
-}
-
-.projectButton {
-    color: var(--primary) !important;
-    transition: background-color 0.3s, transform 0.3s !important;
-}
-
-.projectButton:hover {
-    background-color: rgba(0, 170, 255, 0.1) !important;
-    transform: translateY(-2px);
-}
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .techChip {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .techChip:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .categoryChip {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
